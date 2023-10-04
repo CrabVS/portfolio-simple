@@ -1,0 +1,116 @@
+:root {
+    --header-height: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+nav {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+main {
+    margin-top: var(--header-height);
+    padding-top: 20px;
+}
+
+article.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 56px;
+}
+
+.about-container,
+.contact-container {
+    display: flex;
+    gap: 30px;
+}
+
+.about-container aside,
+.about-container > section {
+    padding: 20px;
+}
+
+.about-container aside {
+    width: 40%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container aside img,
+.about-container aside h2 {
+    align-self: center;
+}
+
+.about-container > section {
+    width: 60%;
+    border: 1px solid black;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    outline: 1px solid black;
+    height: 320px;
+}
+
+.img-placeholder {
+    height: 60%;
+    border-bottom: 1px solid black;
+}
+
+.project section {
+    padding: 16px;
+    height: 40%;
+}
+
+.project-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contact-container section {
+    width: 60%;
+    border: 1px solid black;
+}
+
+.contact-container aside {
+    width: 40%;
+    border: 1px solid black;
+}
+
+.contact-container section > *:not(h1) {
+    padding: 0 16px;
+}
+
+footer {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+}
