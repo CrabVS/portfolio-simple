@@ -79,13 +79,13 @@ article.container {
     margin: 16px 0;
 }
 
-.about-container .linethrough {
+.linethrough {
     margin: 10px 0;
     position: relative;
     z-index: 1;
 }
 
-.about-container .linethrough:before {
+.linethrough:before {
     border-top: 2px solid #c5c5c5;
     content:"";
     margin: 0 auto;
@@ -95,14 +95,18 @@ article.container {
     z-index: -1;
 }
 
-.about-container .linethrough span {
+.linethrough span {
     background: #fff; 
     padding: 0 5px;
     margin-left: 20px;
 }
 
-.about-container > section .linethrough {
-    padding-bottom: 10px;
+.experience-container .linethrough:before {
+    border-top: 1px solid #c5c5c580;
+}
+
+.about-container > section .about-paragraph-box {
+    padding-top: 2px;
 }
 
 .about-container > section .linethrough span {
@@ -119,6 +123,15 @@ article.container {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.projects-container h1 {
+    margin: 0 20px;
+    margin-bottom: 30px;
+}
+
+.projects-container h1 span {
+    margin-left: 40px;
 }
 
 .projects-grid {
@@ -198,6 +211,10 @@ footer {
         align-items: center;
     }
 
+    .projects-container h1 span {
+        margin-left: 30px;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
@@ -211,17 +228,27 @@ footer {
     .about-container > section p {
         text-align: justify;
     }
+
+    .project-heading {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 490px) {
-    .about-container > section .linethrough {
+    article.container {
+        padding: 0 26px;
+    }
+
+    .about-container > section .linethrough,
+    .projects-container .linethrough {
         text-align: center;
     }
     
-    .about-container > section .linethrough span {
+    .about-container > section .linethrough span,
+    .projects-container .linethrough span {
         margin-left: 0;
         padding: 0 10px;
-        text-align: center;
     }
     
     .experience-list {
@@ -241,8 +268,7 @@ footer {
     }
 
     .project-icons {
-        display: flex;
-        flex-direction: column;
+        margin-top: 4px;
     }
 }
 
@@ -257,8 +283,13 @@ footer {
     }
 
     .experience-list {
-        grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
         gap: 20px;
+    }
+
+    .experience-list li {
+        display: flex;
+        justify-content: center;
     }
 
     .experience-list li > span {
@@ -267,6 +298,18 @@ footer {
 
     .project {
         height: 300px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .img-placeholder {
+        height: 50%;
+    }
+
+    .project section {
+        height: 50%;
     }
 }
 
@@ -280,10 +323,15 @@ footer {
     }
 
     .img-placeholder {
-        height: 40%;
+        height: 45%;
     }
 
     .project section {
-        height: 60%;
+        height: 55%;
+    }
+
+    .experience-list {
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        gap: 20px;
     }
 }
