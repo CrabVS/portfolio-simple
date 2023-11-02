@@ -180,7 +180,20 @@ article.container {
 .project-heading {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+    padding-bottom: 6px;
+}
+
+.project-icons a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px 8px;
+    min-width: 64px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 6px;
+    color: black;
 }
 
 .contact-container section,
@@ -253,6 +266,7 @@ footer a {
 
     .experience-list {
         grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
     .contact-container {
@@ -269,7 +283,7 @@ footer a {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .experience-container .linethrough {
         margin-top: 20px;
     }
@@ -284,9 +298,36 @@ footer a {
         text-align: justify;
     }
 
+    .project {
+        height: 380px;
+        text-align: center;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .img-placeholder {
+        height: 55%;
+    }
+
+    .project section {
+        height: 45%;
+    }
+
     .project-heading {
         display: flex;
         flex-direction: column;
+        gap: 6px;
+    }
+
+    .project-icons a {
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 5px 8px;
+        min-width: 64px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 6px;
+        color: black;
     }
 }
 
@@ -317,20 +358,17 @@ footer a {
         line-height: 1.3rem;
     }
     
+    .project {
+        max-width:none;
+        margin: 0;
+    }
+    
     .experience-list {
         grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
     }
 
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .img-placeholder {
-        height: 55%;
-    }
-
-    .project section {
-        height: 45%;
     }
 
     .project-icons {
@@ -362,10 +400,6 @@ footer a {
         display: none;
     }
 
-    .project {
-        height: 300px;
-    }
-
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
@@ -388,17 +422,9 @@ footer a {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
-    .img-placeholder {
-        height: 45%;
-    }
-
-    .project section {
-        height: 55%;
-    }
-
     .experience-list {
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-        gap: 20px;
+        gap: 21px;
     }
 
     .projects-container .project {
