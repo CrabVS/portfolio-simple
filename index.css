@@ -165,11 +165,17 @@ article.container {
 .project {
     outline: 1px solid black;
     height: 320px;
+    border-radius: 10px;
 }
 
 .img-placeholder {
     height: 60%;
     border-bottom: 1px solid black;
+}
+
+.img-placeholder img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 .project section {
