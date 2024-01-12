@@ -67,7 +67,7 @@ main {
 article.container {
     max-width: 1200px;
     margin: 20px auto;
-    padding: 0 56px;
+    padding: 0 56px 50px;
 }
 
 .about-container,
