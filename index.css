@@ -196,6 +196,10 @@ article.container {
     color: black;
 }
 
+.project-icons a:hover {
+    transform: scale(0.97);
+}
+
 .contact-container section,
 .contact-container aside {
     margin-top: 30px;
